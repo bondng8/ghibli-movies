@@ -1,0 +1,253 @@
+/* ------------------- GLOBAL STYLING ------------------- */
+:root {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+/* Page background */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #4f46e5); 
+}
+
+
+/* ------------------- LINKS ------------------- */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* ------------------- BUTTONS ------------------- */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  border-color: #646cff;
+  transform: scale(1.02);
+}
+
+/* ------------------- PAGE LAYOUT ------------------- */
+/* Beautiful centered box */
+.home {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.home h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Subtitle below title */
+.home p {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 1.5rem;
+  color: #6b7280;
+}
+
+/* Navigation link */
+nav {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ------------------- SEARCH SECTION ------------------- */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 300px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.search-input:focus {
+  outline: 2px solid #2563eb;
+}
+
+/* ------------------- MOVIE LIST ------------------- */
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  transition: 0.15s;
+}
+
+.movie-item:hover {
+  background: #eef2ff;
+  transform: translateY(-2px);
+}
+
+/* Favourite buttons */
+.favourite-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.favourite-btn--active {
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+}
+
+.favourite-btn--remove {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+}
+
+button{
+  margin-left: 30px;
+}
+/* ------------------- FAVOURITES PAGE ------------------- */
+
+.favourites-page {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 2.25rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.favourites-page h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Back link */
+.favourites-page > a {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+/* Reuse movie-list + movie-item, but center card a bit more */
+.favourites-page .movie-list {
+  margin-top: 0.5rem;
+}
+
+/* ------------------- MOVIE DETAILS PAGE ------------------- */
+
+.movie-details {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  padding: 2.25rem 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.movie-details-main {
+  flex: 2 1 260px;
+}
+
+.movie-details-main h1 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.9rem;
+}
+
+.movie-details-description {
+  margin: 0;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Right-hand meta card */
+.movie-details-meta {
+  flex: 1 1 220px;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: #f9fafb;
+  font-size: 0.95rem;
+}
+
+.movie-details-meta p {
+  margin: 0 0 0.35rem 0;
+}
+
+.movie-details-meta a {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .movie-details {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .favourites-page,
+  .home {
+    padding: 1.5rem;
+  }
+}
