@@ -78,6 +78,7 @@ button:hover {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 0.3rem;
+  color: #1a1a1a;
 }
 
 /* Subtitle below title */
@@ -213,6 +214,7 @@ button{
   margin-top: 0;
   margin-bottom: 0.75rem;
   font-size: 1.9rem;
+  color: #1a1a1a;
 }
 
 .movie-details-description {
@@ -232,6 +234,7 @@ button{
 
 .movie-details-meta p {
   margin: 0 0 0.35rem 0;
+  color: #1e293b;
 }
 
 .movie-details-meta a {
