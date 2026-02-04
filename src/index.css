@@ -1,6 +1,6 @@
 /* ------------------- GLOBAL STYLING ------------------- */
 :root {
-  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -29,9 +29,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: linear-gradient(135deg, #0f172a, #1e293b, #4f46e5); 
+  background: linear-gradient(135deg, #0f172a, #1e293b, #4f46e5);
 }
-
 
 /* ------------------- LINKS ------------------- */
 a {
@@ -78,6 +77,7 @@ button:hover {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 0.3rem;
+  color: #1a1a1a;
 }
 
 /* Subtitle below title */
@@ -157,7 +157,7 @@ nav {
   color: #991b1b;
 }
 
-button{
+button {
   margin-left: 30px;
 }
 /* ------------------- FAVOURITES PAGE ------------------- */
@@ -213,12 +213,14 @@ button{
   margin-top: 0;
   margin-bottom: 0.75rem;
   font-size: 1.9rem;
+  color: #1a1a1a;
 }
 
 .movie-details-description {
   margin: 0;
   line-height: 1.7;
   color: #4b5563;
+  text-align: justify;
 }
 
 /* Right-hand meta card */
@@ -232,6 +234,7 @@ button{
 
 .movie-details-meta p {
   margin: 0 0 0.35rem 0;
+  color: #1e293b;
 }
 
 .movie-details-meta a {
@@ -250,4 +253,81 @@ button{
   .home {
     padding: 1.5rem;
   }
+}
+
+/* review section */
+.review-container {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.review-container h2 {
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.review-container textarea {
+  width: 100%;
+  padding: 5px 0 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  margin-bottom: 10px;
+}
+
+.review-container button {
+  background: #1a1a1a;
+  margin: 0;
+  color: #868cf6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 0px 0 10px 0;
+}
+
+.review-item {
+  margin-top: 10px;
+  font-size: 13px;
+  padding: 8px 0 8px 8px;
+  background: #2e2e2e;
+  border-radius: 5px;
+  width: 100%;
+  white-space: pre-wrap;
+}
+.review-item h3 {
+  color: #f59e0b;
+  margin-top: 5px;
+}
+
+/* ----------------- rating ------------ */
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.star {
+  font-size: 20px;
+  color: #d1d5db; /* gray */
+  transition:
+    transform 0.1s ease,
+    color 0.1s ease;
+}
+
+.star:hover {
+  transform: scale(1.15);
+}
+
+.star.filled {
+  color: #f59e0b; /* gold */
 }
