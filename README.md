@@ -2,5 +2,7 @@
 
 Studio Ghibli Movies Search
 
- + Favourites
+ + Favourites 
  + Reviews
+ + Form
+ + Modern UI
